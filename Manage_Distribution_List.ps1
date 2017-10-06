@@ -37,7 +37,7 @@ switch ($action){
     $members = Read-Host -Prompt 'Partecipanti alla lista, separati da virgola'
     foreach($member in $members.Split(",")){
         if ($i = 1){
-        New-DistributionGroup -Name $name -PrimarySmtpAddress "$name@example.com" -Members $member -ManagedBy tsw\andrea.feltrin -type Distribution -RequireSenderAuthenticationEnabled $false         
+        New-DistributionGroup -Name $name -PrimarySmtpAddress "$name@example.com" -Members $member -ManagedBy example\email.name -type Distribution -RequireSenderAuthenticationEnabled $false         
         Set-DistributionGroup -Identity $name -HiddenFromAddressListsEnabled $true
         $i++
         }else{
